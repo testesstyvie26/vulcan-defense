@@ -46,16 +46,16 @@
 }
 
 :root {
-  /* Vulcan Defense - Cybersecurity Fortress Theme */
-  --primary: #0066FF;
-  --primary-foreground: #F5F7FA;
-  --sidebar-primary: #0052CC;
-  --sidebar-primary-foreground: #F5F7FA;
-  --chart-1: #00D9FF;
+  /* Vulcan Defense - Cybersecurity Fortress Theme with Gold Accent */
+  --primary: #FFD700;
+  --primary-foreground: #0F1419;
+  --sidebar-primary: #FFC700;
+  --sidebar-primary-foreground: #0F1419;
+  --chart-1: #FFD700;
   --chart-2: #0066FF;
   --chart-3: #00FF88;
-  --chart-4: #0052CC;
-  --chart-5: #003D99;
+  --chart-4: #FFC700;
+  --chart-5: #FFB700;
   --radius: 0.65rem;
   /* Dark theme - professional cybersecurity */
   --background: #0F1419;
@@ -84,11 +84,11 @@
 }
 
 .dark {
-  /* Same as root for consistent dark theme */
-  --primary: #0066FF;
-  --primary-foreground: #F5F7FA;
-  --sidebar-primary: #0052CC;
-  --sidebar-primary-foreground: #F5F7FA;
+  /* Same as root for consistent dark theme with gold */
+  --primary: #FFD700;
+  --primary-foreground: #0F1419;
+  --sidebar-primary: #FFC700;
+  --sidebar-primary-foreground: #0F1419;
   --background: #0F1419;
   --foreground: #F5F7FA;
   --card: #1A1F2E;
@@ -99,18 +99,18 @@
   --secondary-foreground: #A0AEC0;
   --muted: #2D3748;
   --muted-foreground: #718096;
-  --accent: #00D9FF;
+  --accent: #FFD700;
   --accent-foreground: #0F1419;
   --destructive: #FF3B30;
   --destructive-foreground: #F5F7FA;
   --border: #2D3748;
   --input: #1A1F2E;
-  --ring: #0066FF;
-  --chart-1: #00D9FF;
+  --ring: #FFD700;
+  --chart-1: #FFD700;
   --chart-2: #0066FF;
   --chart-3: #00FF88;
-  --chart-4: #0052CC;
-  --chart-5: #003D99;
+  --chart-4: #FFC700;
+  --chart-5: #FFB700;
   --sidebar: #1A1F2E;
   --sidebar-foreground: #F5F7FA;
   --sidebar-accent: #00D9FF;
