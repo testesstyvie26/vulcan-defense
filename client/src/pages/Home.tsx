@@ -428,8 +428,8 @@ export default function Home() {
               <h4 className="font-semibold mb-4">Contato</h4>
               <ul className="space-y-2 text-sm text-muted-foreground">
                 <li>
-                  <a href="tel:+5521666584646" className="hover:text-blue-300 transition">
-                    (21) 6658-4646
+                  <a href="tel:+5521966584646" className="hover:text-blue-300 transition">
+                    (21) 9665-8464 6
                   </a>
                 </li>
                 <li>
