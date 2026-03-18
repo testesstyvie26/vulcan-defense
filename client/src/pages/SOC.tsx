@@ -1,8 +1,12 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Shield, Eye, Zap, CheckCircle } from "lucide-react";
 import { Link } from "wouter";
+import { useState } from "react";
+import ContactFormModal from "@/components/ContactFormModal";
 
 export default function SOC() {
+  const [contactModalOpen, setContactModalOpen] = useState(false);
+
   return (
     <div className="min-h-screen flex flex-col bg-background text-foreground">
       {/* Header */}
@@ -207,11 +211,11 @@ export default function SOC() {
             </p>
           </div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/50">
+            <Button onClick={() => setContactModalOpen(true)} className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/50">
               Solicitar Diagnóstico
               <ArrowRight className="w-5 h-5 ml-2" />
             </Button>
-            <Button className="bg-transparent border border-blue-500/50 text-blue-300 hover:bg-blue-500/10 font-semibold py-3 px-8 rounded-lg transition-all duration-300">
+            <Button onClick={() => setContactModalOpen(true)} className="bg-transparent border border-blue-500/50 text-blue-300 hover:bg-blue-500/10 font-semibold py-3 px-8 rounded-lg transition-all duration-300">
               Falar com Especialista
             </Button>
           </div>
@@ -226,6 +230,14 @@ export default function SOC() {
           </div>
         </div>
       </footer>
+
+      {/* Contact Form Modal */}
+      <ContactFormModal
+        isOpen={contactModalOpen}
+        onClose={() => setContactModalOpen(false)}
+        title="Solicitar Diagnóstico - SOC as a Service"
+        subtitle="Preencha o formulário abaixo e entraremos em contato em breve."
+      />
     </div>
   );
 }

@@ -2,6 +2,7 @@ import { useAuth } from "@/_core/hooks/useAuth";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Link } from "wouter";
+import ContactFormModal from "@/components/ContactFormModal";
 import {
   Shield,
   Radar,
@@ -153,7 +154,7 @@ export default function Home() {
 
           {/* CTA + Mobile Menu */}
           <div className="flex items-center gap-4">
-            <Button className="hidden md:inline-flex bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 px-6 rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/50">
+            <Button onClick={() => setContactModalOpen(true)} className="hidden md:inline-flex bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 px-6 rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/50">
               Solicitar diagnóstico
             </Button>
             <button
@@ -195,7 +196,7 @@ export default function Home() {
               >
                 Contato
               </button>
-              <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 px-6 rounded-lg transition-all duration-300">Solicitar diagnóstico</Button>
+              <Button onClick={() => { setContactModalOpen(true); setMobileMenuOpen(false); }} className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 px-6 rounded-lg transition-all duration-300">Solicitar diagnóstico</Button>
             </nav>
           </div>
         )}
@@ -395,7 +396,7 @@ export default function Home() {
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
             Entre em contato com nossos especialistas para uma avaliação personalizada
           </p>
-          <Button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold text-lg px-8 py-3 rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/50">
+          <Button onClick={() => setContactModalOpen(true)} className="bg-blue-600 hover:bg-blue-700 text-white font-semibold text-lg px-8 py-3 rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/50">
             Solicitar diagnóstico
             <ArrowRight className="w-5 h-5 ml-2" />
           </Button>
@@ -487,75 +488,13 @@ export default function Home() {
         </div>
       </footer>
 
-      {/* Contact Modal */}
-      {contactModalOpen && (
-        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-[100] p-4">
-          <div className="bg-card border border-border rounded-lg p-8 max-w-md w-full shadow-2xl shadow-blue-500/20 animate-in fade-in zoom-in-95 duration-300">
-            <div className="flex items-center justify-between mb-6">
-              <h2 className="text-2xl font-bold">Fale Conosco</h2>
-              <button
-                onClick={() => setContactModalOpen(false)}
-                className="p-2 hover:bg-muted rounded-lg transition"
-              >
-                <X className="w-5 h-5" />
-              </button>
-            </div>
-
-            <div className="space-y-6">
-              {/* Email */}
-              <div className="flex items-start gap-4">
-                <div className="p-3 rounded-lg bg-blue-500/10 border border-blue-500/30">
-                  <Mail className="w-5 h-5 text-blue-400" />
-                </div>
-                <div>
-                  <p className="text-sm text-muted-foreground mb-1">Email</p>
-                  <a
-                    href="mailto:contato@vulcandefense.com.br"
-                    className="text-blue-400 hover:text-blue-300 font-semibold transition"
-                  >
-                    contato@vulcandefense.com.br
-                  </a>
-                </div>
-              </div>
-
-              {/* Phone */}
-              <div className="flex items-start gap-4">
-                <div className="p-3 rounded-lg bg-blue-500/10 border border-blue-500/30">
-                  <Phone className="w-5 h-5 text-blue-400" />
-                </div>
-                <div>
-                  <p className="text-sm text-muted-foreground mb-1">Telefone / WhatsApp</p>
-                  <a
-                    href="tel:+5521966584646"
-                    className="text-blue-400 hover:text-blue-300 font-semibold transition"
-                  >
-                    (21) 9665-8464 6
-                  </a>
-                </div>
-              </div>
-
-              {/* WhatsApp Button */}
-              <a
-                href="https://wa.me/5521966584646?text=Olá%20Vulcan%20Defense!%20Gostaria%20de%20mais%20informações%20sobre%20seus%20serviços."
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-green-500/50 flex items-center justify-center gap-2"
-              >
-                <Phone className="w-5 h-5" />
-                Enviar WhatsApp
-              </a>
-
-              {/* Close Button */}
-              <button
-                onClick={() => setContactModalOpen(false)}
-                className="w-full border border-blue-500/50 text-blue-300 hover:bg-blue-500/10 font-semibold py-3 px-4 rounded-lg transition"
-              >
-                Fechar
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
+      {/* Contact Form Modal */}
+      <ContactFormModal
+        isOpen={contactModalOpen}
+        onClose={() => setContactModalOpen(false)}
+        title="Solicitar Diagnóstico"
+        subtitle="Preencha o formulário abaixo e entraremos em contato em breve."
+      />
     </div>
   );
 }
