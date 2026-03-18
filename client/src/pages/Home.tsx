@@ -15,6 +15,8 @@ import {
   ArrowRight,
   Menu,
   X,
+  Mail,
+  Phone,
 } from "lucide-react";
 import { useState } from "react";
 
@@ -30,6 +32,7 @@ import { useState } from "react";
 
 export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [contactModalOpen, setContactModalOpen] = useState(false);
   const logoUrl = 'https://d2xsxph8kpxj0f.cloudfront.net/310519663453062847/HMVD65vEkJhyp67D4pXp6P/WhatsAppImage2026-03-18at12.21.18_a91a77ba.jpeg';
 
   const services = [
@@ -135,9 +138,12 @@ export default function Home() {
             <a href="#clientes" className="text-sm font-medium hover:text-blue-300 transition">
               Clientes
             </a>
-            <a href="#contato" className="text-sm font-medium hover:text-blue-300 transition">
+            <button
+              onClick={() => setContactModalOpen(true)}
+              className="text-sm font-medium hover:text-blue-300 transition cursor-pointer"
+            >
               Contato
-            </a>
+            </button>
           </nav>
 
           {/* CTA + Mobile Menu */}
@@ -175,9 +181,15 @@ export default function Home() {
               <a href="#clientes" className="text-sm font-medium hover:text-blue-300">
                 Clientes
               </a>
-              <a href="#contato" className="text-sm font-medium hover:text-blue-300">
+              <button
+                onClick={() => {
+                  setContactModalOpen(true);
+                  setMobileMenuOpen(false);
+                }}
+                className="text-sm font-medium hover:text-blue-300 cursor-pointer"
+              >
                 Contato
-              </a>
+              </button>
               <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 px-6 rounded-lg transition-all duration-300">Solicitar diagnóstico</Button>
             </nav>
           </div>
@@ -469,6 +481,76 @@ export default function Home() {
           </div>
         </div>
       </footer>
+
+      {/* Contact Modal */}
+      {contactModalOpen && (
+        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-[100] p-4">
+          <div className="bg-card border border-border rounded-lg p-8 max-w-md w-full shadow-2xl shadow-blue-500/20 animate-in fade-in zoom-in-95 duration-300">
+            <div className="flex items-center justify-between mb-6">
+              <h2 className="text-2xl font-bold">Fale Conosco</h2>
+              <button
+                onClick={() => setContactModalOpen(false)}
+                className="p-2 hover:bg-muted rounded-lg transition"
+              >
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+
+            <div className="space-y-6">
+              {/* Email */}
+              <div className="flex items-start gap-4">
+                <div className="p-3 rounded-lg bg-blue-500/10 border border-blue-500/30">
+                  <Mail className="w-5 h-5 text-blue-400" />
+                </div>
+                <div>
+                  <p className="text-sm text-muted-foreground mb-1">Email</p>
+                  <a
+                    href="mailto:contato@vulcandefense.com.br"
+                    className="text-blue-400 hover:text-blue-300 font-semibold transition"
+                  >
+                    contato@vulcandefense.com.br
+                  </a>
+                </div>
+              </div>
+
+              {/* Phone */}
+              <div className="flex items-start gap-4">
+                <div className="p-3 rounded-lg bg-blue-500/10 border border-blue-500/30">
+                  <Phone className="w-5 h-5 text-blue-400" />
+                </div>
+                <div>
+                  <p className="text-sm text-muted-foreground mb-1">Telefone / WhatsApp</p>
+                  <a
+                    href="tel:+5521966584646"
+                    className="text-blue-400 hover:text-blue-300 font-semibold transition"
+                  >
+                    (21) 9665-8464 6
+                  </a>
+                </div>
+              </div>
+
+              {/* WhatsApp Button */}
+              <a
+                href="https://wa.me/5521966584646?text=Olá%20Vulcan%20Defense!%20Gostaria%20de%20mais%20informações%20sobre%20seus%20serviços."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-green-500/50 flex items-center justify-center gap-2"
+              >
+                <Phone className="w-5 h-5" />
+                Enviar WhatsApp
+              </a>
+
+              {/* Close Button */}
+              <button
+                onClick={() => setContactModalOpen(false)}
+                className="w-full border border-blue-500/50 text-blue-300 hover:bg-blue-500/10 font-semibold py-3 px-4 rounded-lg transition"
+              >
+                Fechar
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
