@@ -1,6 +1,9 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+/* Google Fonts - Poppins para headings, Inter para body */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap');
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
@@ -43,74 +46,77 @@
 }
 
 :root {
-  --primary: var(--color-blue-700);
-  --primary-foreground: var(--color-blue-50);
-  --sidebar-primary: var(--color-blue-600);
-  --sidebar-primary-foreground: var(--color-blue-50);
-  --chart-1: var(--color-blue-300);
-  --chart-2: var(--color-blue-500);
-  --chart-3: var(--color-blue-600);
-  --chart-4: var(--color-blue-700);
-  --chart-5: var(--color-blue-800);
+  /* Vulcan Defense - Cybersecurity Fortress Theme */
+  --primary: #0066FF;
+  --primary-foreground: #F5F7FA;
+  --sidebar-primary: #0052CC;
+  --sidebar-primary-foreground: #F5F7FA;
+  --chart-1: #00D9FF;
+  --chart-2: #0066FF;
+  --chart-3: #00FF88;
+  --chart-4: #0052CC;
+  --chart-5: #003D99;
   --radius: 0.65rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.235 0.015 65);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.235 0.015 65);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.235 0.015 65);
-  --secondary: oklch(0.98 0.001 286.375);
-  --secondary-foreground: oklch(0.4 0.015 65);
-  --muted: oklch(0.967 0.001 286.375);
-  --muted-foreground: oklch(0.552 0.016 285.938);
-  --accent: oklch(0.967 0.001 286.375);
-  --accent-foreground: oklch(0.141 0.005 285.823);
-  --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(0.985 0 0);
-  --border: oklch(0.92 0.004 286.32);
-  --input: oklch(0.92 0.004 286.32);
-  --ring: oklch(0.623 0.214 259.815);
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.235 0.015 65);
-  --sidebar-accent: oklch(0.967 0.001 286.375);
-  --sidebar-accent-foreground: oklch(0.141 0.005 285.823);
-  --sidebar-border: oklch(0.92 0.004 286.32);
-  --sidebar-ring: oklch(0.623 0.214 259.815);
+  /* Dark theme - professional cybersecurity */
+  --background: #0F1419;
+  --foreground: #F5F7FA;
+  --card: #1A1F2E;
+  --card-foreground: #F5F7FA;
+  --popover: #1A1F2E;
+  --popover-foreground: #F5F7FA;
+  --secondary: #1A1F2E;
+  --secondary-foreground: #A0AEC0;
+  --muted: #2D3748;
+  --muted-foreground: #718096;
+  --accent: #00D9FF;
+  --accent-foreground: #0F1419;
+  --destructive: #FF3B30;
+  --destructive-foreground: #F5F7FA;
+  --border: #2D3748;
+  --input: #1A1F2E;
+  --ring: #0066FF;
+  --sidebar: #1A1F2E;
+  --sidebar-foreground: #F5F7FA;
+  --sidebar-accent: #00D9FF;
+  --sidebar-accent-foreground: #0F1419;
+  --sidebar-border: #2D3748;
+  --sidebar-ring: #0066FF;
 }
 
 .dark {
-  --primary: var(--color-blue-700);
-  --primary-foreground: var(--color-blue-50);
-  --sidebar-primary: var(--color-blue-500);
-  --sidebar-primary-foreground: var(--color-blue-50);
-  --background: oklch(0.141 0.005 285.823);
-  --foreground: oklch(0.85 0.005 65);
-  --card: oklch(0.21 0.006 285.885);
-  --card-foreground: oklch(0.85 0.005 65);
-  --popover: oklch(0.21 0.006 285.885);
-  --popover-foreground: oklch(0.85 0.005 65);
-  --secondary: oklch(0.24 0.006 286.033);
-  --secondary-foreground: oklch(0.7 0.005 65);
-  --muted: oklch(0.274 0.006 286.033);
-  --muted-foreground: oklch(0.705 0.015 286.067);
-  --accent: oklch(0.274 0.006 286.033);
-  --accent-foreground:  oklch(0.92 0.005 65);
-  --destructive: oklch(0.704 0.191 22.216);
-  --destructive-foreground: oklch(0.985 0 0);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.488 0.243 264.376);
-  --chart-1: var(--color-blue-300);
-  --chart-2: var(--color-blue-500);
-  --chart-3: var(--color-blue-600);
-  --chart-4: var(--color-blue-700);
-  --chart-5: var(--color-blue-800);
-  --sidebar: oklch(0.21 0.006 285.885);
-  --sidebar-foreground: oklch(0.85 0.005 65);
-  --sidebar-accent: oklch(0.274 0.006 286.033);
-  --sidebar-accent-foreground:  oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.488 0.243 264.376);
+  /* Same as root for consistent dark theme */
+  --primary: #0066FF;
+  --primary-foreground: #F5F7FA;
+  --sidebar-primary: #0052CC;
+  --sidebar-primary-foreground: #F5F7FA;
+  --background: #0F1419;
+  --foreground: #F5F7FA;
+  --card: #1A1F2E;
+  --card-foreground: #F5F7FA;
+  --popover: #1A1F2E;
+  --popover-foreground: #F5F7FA;
+  --secondary: #1A1F2E;
+  --secondary-foreground: #A0AEC0;
+  --muted: #2D3748;
+  --muted-foreground: #718096;
+  --accent: #00D9FF;
+  --accent-foreground: #0F1419;
+  --destructive: #FF3B30;
+  --destructive-foreground: #F5F7FA;
+  --border: #2D3748;
+  --input: #1A1F2E;
+  --ring: #0066FF;
+  --chart-1: #00D9FF;
+  --chart-2: #0066FF;
+  --chart-3: #00FF88;
+  --chart-4: #0052CC;
+  --chart-5: #003D99;
+  --sidebar: #1A1F2E;
+  --sidebar-foreground: #F5F7FA;
+  --sidebar-accent: #00D9FF;
+  --sidebar-accent-foreground: #0F1419;
+  --sidebar-border: #2D3748;
+  --sidebar-ring: #0066FF;
 }
 
 @layer base {
@@ -119,6 +125,11 @@
   }
   body {
     @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
   }
   button:not(:disabled),
   [role="button"]:not([aria-disabled="true"]),
@@ -173,5 +184,90 @@
       padding-right: 2rem;
       max-width: 1280px; /* Standard content width */
     }
+  }
+
+  /* Vulcan Defense - Custom Components */
+  
+  /* Glow effect for neon elements */
+  .glow-cyan {
+    @apply text-cyan-400 shadow-lg shadow-cyan-500/50;
+  }
+  
+  .glow-blue {
+    @apply text-blue-500 shadow-lg shadow-blue-500/50;
+  }
+  
+  .glow-green {
+    @apply text-green-400 shadow-lg shadow-green-500/50;
+  }
+  
+  /* Badge operacional */
+  .badge-operation {
+    @apply inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-950/40 border border-blue-500/30 text-blue-300 text-xs font-medium;
+  }
+  
+  /* Linha decorativa técnica */
+  .tech-divider {
+    @apply h-px bg-gradient-to-r from-transparent via-blue-500/50 to-transparent;
+  }
+  
+  /* Card com hover elevado */
+  .card-tech {
+    @apply bg-card border border-border rounded-lg p-6 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/20 hover:border-blue-500/50;
+  }
+  
+  /* Botão primário com estilo técnico */
+  .btn-primary {
+    @apply bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 px-6 rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/50;
+  }
+  
+  .btn-secondary {
+    @apply bg-transparent border border-blue-500/50 text-blue-300 hover:bg-blue-500/10 font-semibold py-2.5 px-6 rounded-lg transition-all duration-300;
+  }
+}
+@layer utilities {
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slide-up {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes pulse-glow {
+    0%, 100% {
+      opacity: 1;
+      box-shadow: 0 0 20px rgba(0, 102, 255, 0.3);
+    }
+    50% {
+      opacity: 0.8;
+      box-shadow: 0 0 40px rgba(0, 102, 255, 0.5);
+    }
+  }
+
+  .animate-fade-in {
+    animation: fade-in 0.6s ease-out forwards;
+  }
+
+  .animate-slide-up {
+    animation: slide-up 0.8s ease-out forwards;
+  }
+
+  .animate-pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
   }
 }
