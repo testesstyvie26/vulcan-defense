@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import { Link } from "wouter";
 import {
   Shield,
   Radar,
@@ -286,19 +287,25 @@ export default function Home() {
 
           {/* Services Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {services.map((service, idx) => (
-              <div
-                key={idx}
-                className="card-tech group"
-                style={{
-                  animationDelay: `${idx * 100}ms`,
-                }}
-              >
-                <service.icon className="w-8 h-8 text-blue-400 mb-4 group-hover:text-blue-300 transition" />
-                <h3 className="text-lg font-semibold mb-2">{service.title}</h3>
-                <p className="text-muted-foreground text-sm">{service.description}</p>
-              </div>
-            ))}
+            {services.map((service, idx) => {
+              const serviceLinks = [
+                '/soc',
+                '/noc',
+                '/mdr',
+                '/vulnerabilidades',
+                '/pentest',
+                '/grc'
+              ];
+              return (
+                <Link key={idx} href={serviceLinks[idx]}>
+                  <a className="card-tech group block cursor-pointer" style={{ animationDelay: `${idx * 100}ms` }}>
+                    <service.icon className="w-8 h-8 text-blue-400 mb-4 group-hover:text-blue-300 transition" />
+                    <h3 className="text-lg font-semibold mb-2">{service.title}</h3>
+                    <p className="text-muted-foreground text-sm">{service.description}</p>
+                  </a>
+                </Link>
+              );
+            })}
           </div>
         </div>
       </section>

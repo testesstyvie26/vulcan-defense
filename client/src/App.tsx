@@ -5,12 +5,24 @@ import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
+import SOC from "./pages/SOC";
+import NOC from "./pages/NOC";
+import MDR from "./pages/MDR";
+import Vulnerabilidades from "./pages/Vulnerabilidades";
+import Pentest from "./pages/Pentest";
+import GRC from "./pages/GRC";
 
 
 function Router() {
   return (
     <Switch>
       <Route path={"/"} component={Home} />
+      <Route path={"/soc"} component={SOC} />
+      <Route path={"/noc"} component={NOC} />
+      <Route path={"/mdr"} component={MDR} />
+      <Route path={"/vulnerabilidades"} component={Vulnerabilidades} />
+      <Route path={"/pentest"} component={Pentest} />
+      <Route path={"/grc"} component={GRC} />
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}
       <Route component={NotFound} />
