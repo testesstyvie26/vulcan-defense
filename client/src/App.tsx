@@ -11,6 +11,7 @@ import MDR from "./pages/MDR";
 import Vulnerabilidades from "./pages/Vulnerabilidades";
 import Pentest from "./pages/Pentest";
 import GRC from "./pages/GRC";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 
 
 function Router() {
@@ -23,6 +24,7 @@ function Router() {
       <Route path={"/vulnerabilidades"} component={Vulnerabilidades} />
       <Route path={"/pentest"} component={Pentest} />
       <Route path={"/grc"} component={GRC} />
+      <Route path={"/privacy-policy"} component={PrivacyPolicy} />
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}
       <Route component={NotFound} />

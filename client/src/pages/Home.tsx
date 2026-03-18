@@ -453,9 +453,11 @@ export default function Home() {
           <div className="flex flex-col md:flex-row justify-between items-center text-sm text-muted-foreground">
             <p>&copy; 2026 Vulcan Defense. Todos os direitos reservados.</p>
             <div className="flex gap-6 mt-4 md:mt-0">
-              <a href="#" className="hover:text-blue-300 transition">
-                Política de Privacidade
-              </a>
+              <Link href="/privacy-policy">
+                <a className="hover:text-blue-300 transition">
+                  Política de Privacidade
+                </a>
+              </Link>
               <a href="#" className="hover:text-blue-300 transition">
                 Termos de Serviço
               </a>
