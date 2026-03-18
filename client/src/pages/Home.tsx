@@ -1,3 +1,4 @@
+import { useAuth } from "@/_core/hooks/useAuth";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Link } from "wouter";
@@ -31,6 +32,10 @@ import { useState } from "react";
  */
 
 export default function Home() {
+  // The userAuth hooks provides authentication state
+  // To implement login/logout functionality, simply call logout() or redirect to getLoginUrl()
+  let { user, loading, error, isAuthenticated, logout } = useAuth();
+
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [contactModalOpen, setContactModalOpen] = useState(false);
   const logoUrl = 'https://d2xsxph8kpxj0f.cloudfront.net/310519663453062847/HMVD65vEkJhyp67D4pXp6P/WhatsAppImage2026-03-18at12.21.18_bd6cd4ca.jpeg';
