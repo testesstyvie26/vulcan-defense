@@ -127,9 +127,11 @@ export default function Home() {
             <a href="#servicos" className="text-sm font-medium hover:text-blue-300 transition">
               Serviços
             </a>
-            <a href="#plataforma" className="text-sm font-medium hover:text-blue-300 transition">
-              Plataforma
-            </a>
+            <Link href="/plataforma">
+              <a className="text-sm font-medium hover:text-blue-300 transition">
+                Plataforma
+              </a>
+            </Link>
             <a href="#clientes" className="text-sm font-medium hover:text-blue-300 transition">
               Clientes
             </a>
@@ -165,9 +167,11 @@ export default function Home() {
               <a href="#servicos" className="text-sm font-medium hover:text-blue-300">
                 Serviços
               </a>
-              <a href="#plataforma" className="text-sm font-medium hover:text-blue-300">
-                Plataforma
-              </a>
+              <Link href="/plataforma">
+                <a className="text-sm font-medium hover:text-blue-300">
+                  Plataforma
+                </a>
+              </Link>
               <a href="#clientes" className="text-sm font-medium hover:text-blue-300">
                 Clientes
               </a>
