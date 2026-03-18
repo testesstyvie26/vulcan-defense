@@ -111,35 +111,35 @@ export default function Home() {
             <img src={logoUrl} alt="Vulcan Defense" className="w-10 h-10 object-contain" />
             <div className="font-bold text-lg">
               <span className="text-white">VULCAN</span>
-              <span className="text-yellow-400"> DEFENSE</span>
+              <span className="text-blue-400"> DEFENSE</span>
             </div>
           </div>
 
           {/* Desktop Menu */}
           <nav className="hidden md:flex items-center gap-8">
-            <a href="#inicio" className="text-sm font-medium hover:text-yellow-400 transition">
+            <a href="#inicio" className="text-sm font-medium hover:text-blue-300 transition">
               Início
             </a>
-            <a href="#quem-somos" className="text-sm font-medium hover:text-yellow-400 transition">
+            <a href="#quem-somos" className="text-sm font-medium hover:text-blue-300 transition">
               Quem Somos
             </a>
-            <a href="#servicos" className="text-sm font-medium hover:text-yellow-400 transition">
+            <a href="#servicos" className="text-sm font-medium hover:text-blue-300 transition">
               Serviços
             </a>
-            <a href="#plataforma" className="text-sm font-medium hover:text-yellow-400 transition">
+            <a href="#plataforma" className="text-sm font-medium hover:text-blue-300 transition">
               Plataforma
             </a>
-            <a href="#clientes" className="text-sm font-medium hover:text-yellow-400 transition">
+            <a href="#clientes" className="text-sm font-medium hover:text-blue-300 transition">
               Clientes
             </a>
-            <a href="#contato" className="text-sm font-medium hover:text-yellow-400 transition">
+            <a href="#contato" className="text-sm font-medium hover:text-blue-300 transition">
               Contato
             </a>
           </nav>
 
           {/* CTA + Mobile Menu */}
           <div className="flex items-center gap-4">
-            <Button className="hidden md:inline-flex bg-yellow-500 hover:bg-yellow-600 text-black font-semibold py-2.5 px-6 rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-yellow-500/50">
+            <Button className="hidden md:inline-flex bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 px-6 rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/50">
               Solicitar diagnóstico
             </Button>
             <button
@@ -155,27 +155,25 @@ export default function Home() {
         {mobileMenuOpen && (
           <div className="md:hidden border-t border-border bg-card">
             <nav className="container py-4 flex flex-col gap-4">
-              <a href="#inicio" className="text-sm font-medium hover:text-yellow-400">
+                  <a href="#inicio" className="text-sm font-medium hover:text-blue-300">
                 Início
               </a>
-              <a href="#quem-somos" className="text-sm font-medium hover:text-yellow-400">
+              <a href="#quem-somos" className="text-sm font-medium hover:text-blue-300">
                 Quem Somos
               </a>
-              <a href="#servicos" className="text-sm font-medium hover:text-yellow-400">
+              <a href="#servicos" className="text-sm font-medium hover:text-blue-300">
                 Serviços
               </a>
-              <a href="#plataforma" className="text-sm font-medium hover:text-yellow-400">
+              <a href="#plataforma" className="text-sm font-medium hover:text-blue-300">
                 Plataforma
               </a>
-              <a href="#clientes" className="text-sm font-medium hover:text-yellow-400">
+              <a href="#clientes" className="text-sm font-medium hover:text-blue-300">
                 Clientes
               </a>
-              <a href="#contato" className="text-sm font-medium hover:text-yellow-400">
+              <a href="#contato" className="text-sm font-medium hover:text-blue-300">
                 Contato
               </a>
-              <Button className="w-full bg-yellow-500 hover:bg-yellow-600 text-black font-semibold py-2.5 px-6 rounded-lg transition-all duration-300">
-                Solicitar diagnóstico
-              </Button>
+              <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 px-6 rounded-lg transition-all duration-300">Solicitar diagnóstico</Button>
             </nav>
           </div>
         )}
@@ -207,7 +205,7 @@ export default function Home() {
               {/* Main Heading */}
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
                 A Vulcan Defense protege ambientes críticos com foco em{" "}
-                <span className="text-yellow-400">detecção, resposta e resiliência</span>.
+                <span className="text-blue-300">detecção, resposta e resiliência</span>.
               </h1>
 
               {/* Description */}
@@ -219,13 +217,13 @@ export default function Home() {
 
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                <Button className="bg-yellow-500 hover:bg-yellow-600 text-black font-semibold py-2.5 px-6 rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-yellow-500/50">
-                  Conheça os serviços
-                  <ArrowRight className="w-4 h-4 ml-2" />
-                </Button>
-                <Button className="bg-transparent border border-yellow-500/50 text-yellow-400 hover:bg-yellow-500/10 font-semibold py-2.5 px-6 rounded-lg transition-all duration-300">
-                  Ver plataforma
-                </Button>
+              <Button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 px-6 rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/50">
+                Conheça os serviços
+                <ArrowRight className="w-4 h-4 ml-2" />
+              </Button>
+              <Button className="bg-transparent border border-blue-500/50 text-blue-300 hover:bg-blue-500/10 font-semibold py-2.5 px-6 rounded-lg transition-all duration-300">
+                Ver plataforma
+              </Button>
               </div>
             </div>
 
@@ -233,8 +231,8 @@ export default function Home() {
             <div className="relative animate-slide-up">
               <div className="card-tech space-y-6">
                 <div className="flex items-center gap-3">
-                  <div className="w-2 h-2 bg-yellow-400 rounded-full animate-pulse" />
-                  <h3 className="text-sm font-semibold text-yellow-400">VISÃO DA OPERAÇÃO</h3>
+                  <div className="w-2 h-2 bg-blue-400 rounded-full animate-pulse" />
+                  <h3 className="text-sm font-semibold text-blue-300">VISÃO DA OPERAÇÃO</h3>
                 </div>
 
                 <h2 className="text-2xl font-bold">Cyber Defense Center</h2>
@@ -244,7 +242,7 @@ export default function Home() {
                   {pillars.map((pillar, idx) => (
                     <div key={idx} className="flex gap-4">
                       <div className="flex-shrink-0">
-                        <pillar.icon className="w-5 h-5 text-yellow-400" />
+                        <pillar.icon className="w-5 h-5 text-blue-400" />
                       </div>
                       <div>
                         <h4 className="font-semibold text-white">{pillar.title}</h4>
@@ -265,7 +263,7 @@ export default function Home() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, idx) => (
               <div key={idx} className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-yellow-400 mb-2">
+                <div className="text-3xl md:text-4xl font-bold text-blue-400 mb-2">
                   {stat.value}
                 </div>
                 <p className="text-sm text-muted-foreground">{stat.label}</p>
@@ -296,7 +294,7 @@ export default function Home() {
                   animationDelay: `${idx * 100}ms`,
                 }}
               >
-                <service.icon className="w-8 h-8 text-yellow-400 mb-4 group-hover:text-yellow-300 transition" />
+                <service.icon className="w-8 h-8 text-blue-400 mb-4 group-hover:text-blue-300 transition" />
                 <h3 className="text-lg font-semibold mb-2">{service.title}</h3>
                 <p className="text-muted-foreground text-sm">{service.description}</p>
               </div>
@@ -324,7 +322,7 @@ export default function Home() {
             <div className="grid md:grid-cols-3 gap-6">
               {pillars.map((pillar, idx) => (
                 <Card key={idx} className="bg-card border-border p-6">
-                  <pillar.icon className="w-8 h-8 text-yellow-400 mb-4" />
+                  <pillar.icon className="w-8 h-8 text-blue-400 mb-4" />
                   <h3 className="text-lg font-semibold mb-3">{pillar.title}</h3>
                   <p className="text-sm text-muted-foreground">{pillar.description}</p>
                 </Card>
@@ -369,7 +367,7 @@ export default function Home() {
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
             Entre em contato com nossos especialistas para uma avaliação personalizada
           </p>
-          <Button className="bg-yellow-500 hover:bg-yellow-600 text-black font-semibold text-lg px-8 py-3 rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-yellow-500/50">
+          <Button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold text-lg px-8 py-3 rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/50">
             Solicitar diagnóstico
             <ArrowRight className="w-5 h-5 ml-2" />
           </Button>
@@ -390,17 +388,17 @@ export default function Home() {
               <h4 className="font-semibold mb-4">Serviços</h4>
               <ul className="space-y-2 text-sm text-muted-foreground">
                 <li>
-                  <a href="#" className="hover:text-yellow-400 transition">
+                  <a href="#" className="hover:text-blue-300 transition">
                     Monitoramento 24x7
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-yellow-400 transition">
+                  <a href="#" className="hover:text-blue-300 transition">
                     Resposta a Incidentes
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-yellow-400 transition">
+                  <a href="#" className="hover:text-blue-300 transition">
                     Gestão de Vulnerabilidades
                   </a>
                 </li>
@@ -410,17 +408,17 @@ export default function Home() {
               <h4 className="font-semibold mb-4">Empresa</h4>
               <ul className="space-y-2 text-sm text-muted-foreground">
                 <li>
-                  <a href="#" className="hover:text-yellow-400 transition">
+                  <a href="#" className="hover:text-blue-300 transition">
                     Sobre Nós
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-yellow-400 transition">
+                  <a href="#" className="hover:text-blue-300 transition">
                     Blog
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-yellow-400 transition">
+                  <a href="#" className="hover:text-blue-300 transition">
                     Contato
                   </a>
                 </li>
@@ -430,12 +428,12 @@ export default function Home() {
               <h4 className="font-semibold mb-4">Contato</h4>
               <ul className="space-y-2 text-sm text-muted-foreground">
                 <li>
-                  <a href="tel:" className="hover:text-yellow-400 transition">
-                    (11) 9999-9999
+                  <a href="tel:+5521666584646" className="hover:text-blue-300 transition">
+                    (21) 6658-4646
                   </a>
                 </li>
                 <li>
-                  <a href="mailto:" className="hover:text-yellow-400 transition">
+                  <a href="mailto:contato@vulcandefense.com.br" className="hover:text-blue-300 transition">
                     contato@vulcandefense.com.br
                   </a>
                 </li>
@@ -448,10 +446,10 @@ export default function Home() {
           <div className="flex flex-col md:flex-row justify-between items-center text-sm text-muted-foreground">
             <p>&copy; 2026 Vulcan Defense. Todos os direitos reservados.</p>
             <div className="flex gap-6 mt-4 md:mt-0">
-              <a href="#" className="hover:text-yellow-400 transition">
+              <a href="#" className="hover:text-blue-300 transition">
                 Política de Privacidade
               </a>
-              <a href="#" className="hover:text-yellow-400 transition">
+              <a href="#" className="hover:text-blue-300 transition">
                 Termos de Serviço
               </a>
             </div>

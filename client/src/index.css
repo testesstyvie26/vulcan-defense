@@ -46,16 +46,16 @@
 }
 
 :root {
-  /* Vulcan Defense - Cybersecurity Fortress Theme with Gold Accent */
-  --primary: #FFD700;
-  --primary-foreground: #0F1419;
-  --sidebar-primary: #FFC700;
-  --sidebar-primary-foreground: #0F1419;
-  --chart-1: #FFD700;
-  --chart-2: #0066FF;
+  /* Vulcan Defense - Cybersecurity Fortress Theme with Blue/Black Gradient */
+  --primary: #0066FF;
+  --primary-foreground: #FFFFFF;
+  --sidebar-primary: #0052CC;
+  --sidebar-primary-foreground: #FFFFFF;
+  --chart-1: #0066FF;
+  --chart-2: #00D9FF;
   --chart-3: #00FF88;
-  --chart-4: #FFC700;
-  --chart-5: #FFB700;
+  --chart-4: #0052CC;
+  --chart-5: #003D99;
   --radius: 0.65rem;
   /* Dark theme - professional cybersecurity */
   --background: #0F1419;
@@ -84,33 +84,33 @@
 }
 
 .dark {
-  /* Same as root for consistent dark theme with gold */
-  --primary: #FFD700;
-  --primary-foreground: #0F1419;
-  --sidebar-primary: #FFC700;
-  --sidebar-primary-foreground: #0F1419;
-  --background: #0F1419;
-  --foreground: #F5F7FA;
-  --card: #1A1F2E;
-  --card-foreground: #F5F7FA;
-  --popover: #1A1F2E;
-  --popover-foreground: #F5F7FA;
-  --secondary: #1A1F2E;
-  --secondary-foreground: #A0AEC0;
-  --muted: #2D3748;
-  --muted-foreground: #718096;
-  --accent: #FFD700;
-  --accent-foreground: #0F1419;
+  /* Blue/Black gradient theme with white text */
+  --primary: #0066FF;
+  --primary-foreground: #FFFFFF;
+  --sidebar-primary: #0052CC;
+  --sidebar-primary-foreground: #FFFFFF;
+  --background: #0A0E27;
+  --foreground: #FFFFFF;
+  --card: #1A1F3A;
+  --card-foreground: #FFFFFF;
+  --popover: #1A1F3A;
+  --popover-foreground: #FFFFFF;
+  --secondary: #1A1F3A;
+  --secondary-foreground: #E0E7FF;
+  --muted: #2D3A5C;
+  --muted-foreground: #A5B4FC;
+  --accent: #0066FF;
+  --accent-foreground: #FFFFFF;
   --destructive: #FF3B30;
-  --destructive-foreground: #F5F7FA;
-  --border: #2D3748;
-  --input: #1A1F2E;
-  --ring: #FFD700;
-  --chart-1: #FFD700;
-  --chart-2: #0066FF;
+  --destructive-foreground: #FFFFFF;
+  --border: #2D3A5C;
+  --input: #1A1F3A;
+  --ring: #0066FF;
+  --chart-1: #0066FF;
+  --chart-2: #00D9FF;
   --chart-3: #00FF88;
-  --chart-4: #FFC700;
-  --chart-5: #FFB700;
+  --chart-4: #0052CC;
+  --chart-5: #003D99;
   --sidebar: #1A1F2E;
   --sidebar-foreground: #F5F7FA;
   --sidebar-accent: #00D9FF;
@@ -118,13 +118,14 @@
   --sidebar-border: #2D3748;
   --sidebar-ring: #0066FF;
 }
-
 @layer base {
   * {
     @apply border-border outline-ring/50;
   }
   body {
     @apply bg-background text-foreground;
+    background: linear-gradient(135deg, #0A0E27 0%, #0F1419 50%, #1A1F3A 100%);
+    background-attachment: fixed;
     font-family: 'Inter', sans-serif;
   }
   h1, h2, h3, h4, h5, h6 {
