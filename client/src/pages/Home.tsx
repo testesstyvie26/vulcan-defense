@@ -39,7 +39,7 @@ export default function Home() {
 
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [contactModalOpen, setContactModalOpen] = useState(false);
-  const logoUrl = 'https://d2xsxph8kpxj0f.cloudfront.net/310519663453062847/HMVD65vEkJhyp67D4pXp6P/WhatsAppImage2026-03-18at12.21.18_bd6cd4ca.jpeg';
+  const logoUrl = 'https://d2xsxph8kpxj0f.cloudfront.net/310519663453062847/HMVD65vEkJhyp67D4pXp6P/WhatsAppImage2026-03-18at12.21.18_1ba52fa3.png';
 
   const services = [
     {
