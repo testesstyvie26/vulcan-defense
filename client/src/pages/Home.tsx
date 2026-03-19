@@ -321,11 +321,11 @@ export default function Home() {
               ];
               return (
                 <Link key={idx} href={serviceLinks[idx]}>
-                  <a className="card-tech group block cursor-pointer animate-slide-up fade-in-on-scroll" style={{ animationDelay: `${idx * 100}ms` }}>
+                  <div className="card-tech group block cursor-pointer animate-slide-up fade-in-on-scroll" style={{ animationDelay: `${idx * 100}ms` }}>
                     <service.icon className="w-8 h-8 text-blue-400 mb-4 group-hover:text-blue-300 transition" />
                     <h3 className="text-lg font-semibold mb-2">{service.title}</h3>
                     <p className="text-muted-foreground text-sm">{service.description}</p>
-                  </a>
+                  </div>
                 </Link>
               );
             })}
