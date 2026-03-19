@@ -21,6 +21,7 @@ import {
   Phone,
 } from "lucide-react";
 import { useState } from "react";
+import { useScrollAnimation, useParallax } from "@/hooks/useScrollAnimation";
 
 /**
  * Vulcan Defense - Home Page
@@ -320,7 +321,7 @@ export default function Home() {
               ];
               return (
                 <Link key={idx} href={serviceLinks[idx]}>
-                  <a className="card-tech group block cursor-pointer" style={{ animationDelay: `${idx * 100}ms` }}>
+                  <a className="card-tech group block cursor-pointer animate-slide-up fade-in-on-scroll" style={{ animationDelay: `${idx * 100}ms` }}>
                     <service.icon className="w-8 h-8 text-blue-400 mb-4 group-hover:text-blue-300 transition" />
                     <h3 className="text-lg font-semibold mb-2">{service.title}</h3>
                     <p className="text-muted-foreground text-sm">{service.description}</p>
@@ -350,7 +351,7 @@ export default function Home() {
 
             <div className="grid md:grid-cols-3 gap-6">
               {pillars.map((pillar, idx) => (
-                <Card key={idx} className="bg-card border-border p-6">
+                <Card key={idx} className="bg-card border-border p-6 animate-slide-up fade-in-on-scroll" style={{ animationDelay: `${idx * 100}ms` }}>
                   <pillar.icon className="w-8 h-8 text-blue-400 mb-4" />
                   <h3 className="text-lg font-semibold mb-3">{pillar.title}</h3>
                   <p className="text-sm text-muted-foreground">{pillar.description}</p>
